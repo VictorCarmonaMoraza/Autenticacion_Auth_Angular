@@ -14,4 +14,12 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  desloguear() {
+    this.auth.logout({ logoutParams: { returnTo: document.location.origin } });
+  }
+
+  logear() {
+    this.auth.loginWithRedirect();
+  }
+
 }
